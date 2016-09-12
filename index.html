@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Christian Dinh</title>
+	<meta name = "description" content = "The web portfolio of Christian Dinh (the programmer, not the photographer)">
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<div id = "wrapper">
+
+	<!--GAMEBOY-->
+	<div id = "gameboy">
+	
+		<!--SCREEN-->
+		<div id = "bevel">
+			
+			<div class = "stripe" id = "red"></div>
+			<div class = "stripe" id = "blue"></div>
+			<div id = "power"></div>
+			
+			<!--NORMAL SCREEN-->
+			<div id = "screen">
+				<div class = "current" id = "home" onClick = "setHome()">Home</div>
+				<div class = "nav" id = "about" onClick = "setAbout()">About</div>
+				<div class = "nav" id = "projects" onClick = "setProjects()">Projects</div>
+				<div class = "nav" id = "contact" onClick = "setContact()">Contact</div>
+			</div>
+			<!--WORM SCREEN-->
+			<div id = "screen2">
+				<img src = "images/worm/logo.png" id = "logo" alt = 'w0rm'>
+				<div class = "nav" onClick = "beginGame()">Start</div>
+				<div class = "nav" onClick = "quit()">Exit</div>
+			</div>
+
+		</div>
+		
+		<!--BUTTONS-->
+		<div class = "button" id = "a" onClick = "pressA()"></div>
+		<div class = "button" id = "b" onClick = "pressB()"></div>
+		
+		<div id = "vertical">
+			<div id = "up" onClick = "pressUp()"></div>
+			<div id = "down" onClick = "pressDown()"></div>
+		</div>
+
+		<div id = "horizontal">
+			<div id = "left" onClick = "pressLeft()"></div>
+			<div id = "right" onClick = "pressRight()"></div>
+		</div>
+		
+		<div class = "rubber" id = "select" onClick = "pressSelect()"></div>
+		<div class = "rubber" id = "start" onClick = "pressStart()"></div>
+		
+	</div>
+	<!--END GAMEBOY-->
+	
+	<!--CONTENT PANEL-->
+	<div id = "content">
+
+		<!-- WORM -->
+		<div id = "code">
+			<p id = "score">Score = 0</p>
+			<canvas class = "worm" id = "game"></canvas>
+			<div class = "worm" id = "splash">
+				<img src = "images/worm/splash.png" id = "splashHead" alt = 'w0rm'>press start
+			</div>
+			<img src = "images/worm/zx.png" class = "instruction" id = "zx" alt = '[z] [x]'>
+			<img src = "images/worm/arrows.png" class = "instruction" id = "arrows" alt = '[Arrow Keys]'>
+			<p class = "instructionText" id = "zxText">PORTALS</p>
+			<p class = "instructionText" id = "arrowsText">MOVE</p>
+		</div>
+
+		<!-- CONTENT -->
+		<div id = "heading">Home</div>
+		<div id = "text">
+			My name is Christian Dinh. Welcome to my web portfolio!<br><br><noscript>Unless you really like being stuck on this homepage, please enable Javascript!</noscript>
+		</div>
+		<div id = "fade"></div>
+		<canvas id = "banner"></canvas>
+		<div id = "pause">Paused</div>
+
+	</div>
+
+	<!--ADJUST FORMAT BASED ON RESOLUTION-->
+	<script type="text/JavaScript" src="format.js"></script>
+</div>
+	
+</body>
+
+</html>

@@ -1,0 +1,491 @@
+@font-face {
+	font-family: pixel_head;
+	src: url("fonts/pixhead.eot");
+	src: local("pixel_head"), url("fonts/pixhead.TTF") format("truetype");
+}
+
+@font-face {
+	font-family: pixel_body;
+	src: url("fonts/Minecraftia.eot");
+	src: local("pixel_body"), url("fonts/Minecraftia.ttf") format("truetype");
+}
+
+* { padding:0; margin:0; }
+
+body, html { background-color: #adcaaa; height: 100%; }
+
+canvas, img 
+{
+    image-rendering: optimizeQuality;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+#wrapper
+{
+	position: relative;
+	width: 1054px; width: 150vh;
+	height: 597px; height: 85vh;
+	top: 50%; top: 7.5vh;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	margin-top: -298px; margin-top: 0vh;
+}
+
+/*************************************/
+/******** GAMEBOY STARTS HERE ********/
+/*************************************/
+
+#gameboy
+{
+	display: inline-block;
+	height: 100%;
+	width: 345px; width: 49vh;
+	background-color: #DEDABA;
+	border-radius: 3% 3% 15% 3%;
+	position: relative;
+	float: left;
+	
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#bevel
+{
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	height: 45%;
+	background-color: gray;
+	border-radius: 3% 3% 15% 3%;
+	margin: 10% 5% 0% 5%;
+}
+
+.stripe
+{
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1%;
+	width: 90%;
+}
+
+#red
+{
+	top: 3%;
+	background-color: #c56769;
+}
+
+#blue
+{
+	top: 6%;
+	background-color: #225487;
+}
+
+#power
+{
+	position: absolute;
+	background-color: #fd5d5f;
+	height: 5%;
+	width: 4%;
+	top: 40%;
+	left: 5%;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 3px #fd5d5f, inset 0px 0px 10px 1px red; 
+}
+
+#screen
+{
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: #adcaaa;
+	border-radius: 1%;
+	margin: 10% 15% 10% 15%;
+	overflow: auto;
+	font-family: pixel_head;
+	font-size: 150%;
+	text-indent: 5%;
+    line-height: 200%;
+}
+
+.nav
+{
+	display: block;
+	height: 25%;
+	width: 100%;
+	background-color: #c0d6bd;
+	color: #9cb699;
+	overflow: hidden;
+}
+
+.nav:hover 
+{ 
+	background-color: #adcaaa;
+	color: #c0d6bd;
+}
+
+.current
+{
+	display: block;
+	height: 25%;
+	width: 100%;
+	background-color: #9cb699;
+	color: #c0d6bd;
+	overflow: hidden;
+}
+
+.button
+{
+	position: absolute;
+	height: 8%;
+	width: 13%;
+	background-color: #c56769;
+	border-radius: 100%;
+}
+
+.button:hover { background-color: #b35b5d;}
+
+.button:active { box-shadow: inset 0px 0px 10px 5px #875455;}
+
+#a
+{
+	right: 8%;
+	top: 61%;
+}
+
+#b
+{
+	right: 25%;
+	top: 68%;
+}
+
+#vertical
+{
+	position: absolute;
+	height: 17%;
+	width: 8%;
+	background-color: gray;
+	left: 18%;
+	top: 60.5%;
+	border-radius: 5%;
+}
+
+#up
+{
+	position: absolute;
+	width: 100%;
+	height: 40%;
+	background-color: gray;
+}
+
+#up:hover { box-shadow: inset 0px 8px 5px -2px #5f6872;}
+
+#up:active { box-shadow: inset 0px 8px 5px -2px;}
+
+#down
+{
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
+	height: 40%;
+	background-color: gray;
+}
+
+#down:hover { box-shadow: inset 0px -8px 5px -2px #5f6872;}
+
+#down:active { box-shadow: inset 0px -8px 5px -2px;}
+
+#horizontal
+{
+	position: absolute;
+	height: 5%;
+	width: 28%;
+	background-color: gray;
+	left: 8%;
+	top: 66.5%;
+	border-radius: 5%;
+}
+
+#left
+{
+	position: absolute;
+	width: 35%;
+	height: 100%;
+	background-color: gray;
+}
+
+#left:hover { box-shadow: inset 8px 0px 5px -2px #5f6872;}
+
+#left:active { box-shadow: inset 8px 0px 5px -2px;}
+
+#right
+{
+	position: absolute;
+	right: 0%;
+	width: 35%;
+	height: 100%;
+	background-color: gray;
+}
+
+#right:hover { box-shadow: inset -8px 0px 5px -2px #5f6872;}
+
+#right:active { box-shadow: inset -8px 0px 5px -2px;}
+
+.rubber
+{
+	position: absolute;
+	background-color: gray;
+	width: 10%;
+	height: 2%;
+	top: 85%;
+	border-radius: 10%;
+}
+
+.rubber:hover { background-color: #5f6872;}
+
+.rubber:active { background-color: black;}
+
+#select { left: 35%;}
+
+#start { right: 35%;}
+
+/**************************************/
+/****** CONTENT PANE STARTS HERE ******/
+/**************************************/
+
+#content
+{
+	display: inline-block;
+	height: 100%;
+	width: 630px; width: 90vh;
+	position: relative;
+	background-color: #c0d6bd;
+	border-radius: 3% 3% 0% 0%;
+	float: right;
+	overflow: hidden;
+}
+
+#bg
+{
+	width: 400%;
+	height: auto;
+	position: absolute;
+	bottom: 0px;
+	left:0px;
+}
+
+#bg2
+{
+	width: 200%;
+	height: auto;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#bg3
+{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#heading
+{
+	display: block;
+	text-align: center;
+	font-family: pixel_head;
+	font-size: 150%;
+	line-height: 200%;
+	color: #9cb699;
+	height: 8%;
+}
+
+#text
+{
+	display: block;
+	position: relative;
+	text-align: center;
+	font-family: pixel_body;
+	font-size: 12px;
+	color: #9cb699;
+	padding: 0% 7.5% 0% 7.5%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 63%;
+	width: 85%;
+}
+
+#text a:link { color: #9cb699; text-decoration: none; }
+
+#text a:visited { color: #9cb699; text-decoration: none; }
+
+#text a:hover { color: #adcaaa; text-decoration: none; }
+
+#fade
+{
+	position: absolute;
+	display: block;
+	pointer-events: none;
+	height: 63%;
+	width: 100%;
+	background: linear-gradient(rgba(192, 214, 189, 0) 75%, #c0d6bd);
+	left: 0px;
+	top: 8%;
+	z-index: 1000;
+}
+
+#pause
+{
+	visibility: hidden;
+	position: absolute;
+	display: block;
+	background-color: rgba(192, 214, 189, 0.5);
+	top: 71%;
+	height: 29%;
+	width: 100%;
+	z-index: 1000;
+	text-align: center;
+	font-family: pixel_body;
+	font-size: 16px;
+	color: #9cb699;
+	line-height: 600%;
+}
+
+#banner
+{
+	display: block;
+	width: 100%;
+	height: 29%;
+}
+
+.project 
+{ 
+	width: 100%; 
+	border: 4px double #9cb699;
+}
+
+.project:hover
+{
+	opacity: 0.75;
+}
+
+/**************************************/
+/********** WORM BEGINS HERE **********/
+/**************************************/
+
+#code
+{
+	position: absolute;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	background-color: #c0d6bd;
+	z-index: 5000;
+	font-family: pixel_body;
+	color: #9cb699;
+}
+
+#score
+{
+	position: absolute;
+	top: 1%;
+	left: 13%;
+}
+
+.worm
+{
+	position: absolute;
+	background-color: #efedec;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	width: 74%;
+	height: 74%;
+	width: 442px; width: 63vh;
+	height: 442px; height: 63vh;
+	border-radius: 0.5%;
+}
+
+#splash
+{
+	visibility: hidden;
+	color: gray;
+	font-family: pixel_body;
+	text-align: center;
+	font-size: 25px;
+	line-height: 800%;
+}
+
+#splashHead
+{
+	display: block;
+	width: 90%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.instruction
+{
+	position: absolute;
+	bottom: 4.3%;
+	height: 15%;
+	width: auto;
+}
+
+#zx { left: 26%; }
+
+#arrows { right: 26%; }
+
+.instructionText
+{
+	position: absolute;
+	bottom: 1%;
+}
+
+#zxText { left: 27.5%; }
+
+#arrowsText { right: 32.6%; }
+
+#screen2
+{
+	position: absolute;
+	visibility: hidden;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: #c0d6bd;
+	border-radius: 1%;
+	margin: 10% 15% 10% 15%;
+	overflow: auto;
+	font-family: pixel_head;
+	font-size: 150%;
+	text-align: center;
+    line-height: 200%;
+}
+
+#minimenu
+{
+	display: block;
+	height: 50%;
+	width: 100%;
+	color: #9cb699;
+	overflow: hidden;
+}
+
+#logo
+{
+	display: block;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+}
